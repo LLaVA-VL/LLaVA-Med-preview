@@ -2,6 +2,8 @@
 
 *Visual instruction tuning towards buiding large language and vision models with GPT-4 level capabilities in the biomedicine space.*
 
+Please check out [https://github.com/microsoft/LLaVA-Med](https://github.com/microsoft/LLaVA-Med) for the official LLaVA-Med release. This repo is not actively maintained.
+
 [[Paper](https://arxiv.org/abs/2306.00890)] 
 
 <!-- [[Data](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K)] [[Model](https://huggingface.co/liuhaotian/LLaVA-13b-delta-v0)] -->
@@ -50,29 +52,6 @@
 </p>
 
 ### Data Download
-| Image files | Size |
-| --- | ---: |
-| [images.zip](https://hanoverprod.blob.core.windows.net/public/med_llava/images.zip?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 47.62 GiB |
-
-| Alignment data files | Size |
-| --- | ---: |
-| [llava_med_alignment_500k.json](https://hanoverprod.blob.core.windows.net/public/med_llava/alignment/llava_med_alignment_500k.json?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 341.52 MiB |
-| [llava_med_alignmnet_image_urls.jsonl](https://hanoverprod.blob.core.windows.net/public/med_llava/alignment/llava_med_alignment_image_urls.jsonl?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 80.78 MiB |
-
-| Instruction-Tuning data files | Size |
-| --- | ---: |
-| [llava_med_instruct_10k.json](https://hanoverprod.blob.core.windows.net/public/med_llava/instruct/llava_med_instruct_10k.json?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 19.24 MiB |
-| [llava_med_instruct_60k.json](https://hanoverprod.blob.core.windows.net/public/med_llava/instruct/llava_med_instruct_60k.json?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 	84.65 MiB |
-| [llava_med_instruct_60k_inline_mention.json](https://hanoverprod.blob.core.windows.net/public/med_llava/instruct/llava_med_instruct_60k_inline_mention.json?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 83.61 MiB |
-| [llava_med_instruct_fig_captions.json](https://hanoverprod.blob.core.windows.net/public/med_llava/instruct/llava_med_instruct_fig_captions.json?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 161.39 MiB |
-| [llava_med_instruct_image_urls.jsonl](https://hanoverprod.blob.core.windows.net/public/med_llava/instruct/llava_med_instruct_image_urls.jsonl?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 9.89 MiB |
-
-| Evaluation files | Size |
-| --- | ---: |
-| [llava_med_eval_qa50_qa.jsonl](https://hanoverprod.blob.core.windows.net/public/med_llava/eval/llava_med_eval_qa50_qa.jsonl?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 	256.18 KiB |
-| [llava_med_eval_qa50_fig_captions.json](https://hanoverprod.blob.core.windows.net/public/med_llava/eval/llava_med_eval_qa50_fig_captions.json?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 51.82 KiB |
-| [llava_med_qa50_instruct_caption_in_text_cleaned-60k-3epoch.json](https://hanoverprod.blob.core.windows.net/public/med_llava/eval/llava_med_qa50_instruct_caption_in_text_cleaned-60k-3epoch.json?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) | 100.97 KiB |
-| [llava_med_eval_qa50_image_urls.jsonl](https://hanoverprod.blob.core.windows.net/public/med_llava/eval/llava_med_eval_qa50_image_urls.jsonl?sv=2021-10-04&st=2023-08-21T06%3A35%3A05Z&se=2024-02-22T07%3A35%3A00Z&sr=c&sp=rl&sig=nB35sBICKkq1uJoeUqf524GLGUiLG16sUISgIJ%2BsNXc%3D) |  8.53 KiB |
 
 To download our langauge-image multimodal instruction-folllowing dataset, please run the following script:
 ```bash
